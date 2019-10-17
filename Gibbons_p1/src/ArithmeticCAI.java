@@ -491,7 +491,7 @@ public class ArithmeticCAI
 
     public static void main(String args[])
     {
-        int questionNumber = 5, mixQuestionNum = 5, continueCheck = -5, difficulty = 0, type = 0, mixFactor = -1, correctResponseCount = 0;
+        int questionNumber = 10, mixQuestionNum = 10, continueCheck = -5, difficulty = 0, type = 0, mixFactor = -1, correctResponseCount = 0;
 
         Scanner userIn = new Scanner(System.in);
 
