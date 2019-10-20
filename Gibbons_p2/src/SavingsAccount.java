@@ -1,26 +1,29 @@
-//import ;
 
 public class SavingsAccount
 {
-    private int savingsBalance;
-    private static float annualInterestRate;
+    private double savingsBalance;
+    private static double annualInterestRate;
 
-    public  SavingsAccount(int balance)
+    public  SavingsAccount(double balance)
     {
         savingsBalance = balance;
     }
 
     public void CalculateMonthlyInterest()
     {
-        savingsBalance += ((annualInterestRate * savingsBalance) / 12);
+        for(int i = 0; i < 12; i++)
+        {
+            savingsBalance += ((annualInterestRate * savingsBalance) / 12);
+        }
+        System.out.printf("New balance: %.2f\n", savingsBalance);
     }
 
-    private static void ChangeInterestRate(float newRate)
+    private static void ChangeInterestRate(double newRate)
     {
         annualInterestRate = newRate;
     }
 
-    public static void ModifyInterestRate(float newRate)
+    public static void ModifyInterestRate(double newRate)
     {
         ChangeInterestRate(newRate);
     }
